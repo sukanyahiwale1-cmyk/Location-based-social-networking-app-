@@ -24,6 +24,21 @@ export interface SocialPost {
   time: string;
 }
 
+export interface GeoPlace {
+  id: string;
+  name: string;
+  category: 'Cafe' | 'Park' | 'Gym' | 'Tech';
+  location: { x: string; y: string };
+  rating: number;
+}
+
+export interface LocationHistoryEntry {
+  id: string;
+  placeName: string;
+  timestamp: string;
+  duration: string;
+}
+
 export const MOCK_USERS: UserProfile[] = [
   {
     id: 'u1',
@@ -58,6 +73,18 @@ export const MOCK_USERS: UserProfile[] = [
     status: 'Running late! 🏃‍♀️',
     telemetry: { signal: 78, activity: 'Moving', lastSeen: 'Now' }
   }
+];
+
+export const MOCK_PLACES: GeoPlace[] = [
+  { id: 'p1', name: 'Quantum Coffee', category: 'Cafe', location: { x: '55%', y: '40%' }, rating: 4.8 },
+  { id: 'p2', name: 'Silicon Park', category: 'Park', location: { x: '25%', y: '20%' }, rating: 4.5 },
+  { id: 'p3', name: 'Neon Fitness', category: 'Gym', location: { x: '70%', y: '70%' }, rating: 4.9 },
+];
+
+export const MOCK_HISTORY: LocationHistoryEntry[] = [
+  { id: 'h1', placeName: 'Brooklyn Tech Hub', timestamp: 'Today, 10:00 AM', duration: '2h 15m' },
+  { id: 'h2', placeName: 'Central Brew', timestamp: 'Yesterday, 4:30 PM', duration: '45m' },
+  { id: 'h3', placeName: 'Pixel Garden', timestamp: 'Oct 22, 2:00 PM', duration: '1h 10m' },
 ];
 
 export const MOCK_POSTS: SocialPost[] = [
