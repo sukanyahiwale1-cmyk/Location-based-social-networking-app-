@@ -34,4 +34,5 @@ next-env.d.ts
 
 # Custom ignores
 api
-config.tsx
+config.ts
+apikey 
